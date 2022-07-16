@@ -51,12 +51,15 @@ const Bruh = () => {
   }
 
   useEffect(() => {
-    const bruhContainer = () => {
-      if (bruhText === "bruh") {
-        addBruh();
-      }
+    const addBruh = () => {
+      setBruhCount((prevCount) => prevCount + 1);
+      playBruh();
     };
-    bruhContainer();
+
+    if (bruhText === "bruh") {
+      const zz = addBruh();
+      console.log(zz);
+    }
   }, [bruhText]);
 
   return (
